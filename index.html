@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(240, 220, 245);
+            min-height: 100vh;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2em;
+            text-transform: uppercase;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .gallery {
+            width: 70rem;
+            min-width: 50rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: .5em;
+            background-color: white;
+            padding: 1em .5em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+        }
+
+        .gallery__image {
+            flex-basis: calc(24% - .5em);
+            position: relative;
+            overflow: hidden;
+            flex-grow: 1;
+        }
+
+        .gallery__image::after {
+            content: "";
+            position: absolute;
+            background-color: white;
+            inset: 0;
+            opacity: .3;
+            pointer-events: none;
+            transition: opacity .5s ease-in-out;
+        }
+
+        .gallery__image:hover::after {
+            opacity: 0;
+        }
+
+
+        .gallery__image img {
+            transition: all .5s ease-in-out;
+        }
+
+        .gallery__image:hover img {
+            transform: scale(1.2);
+        }
+
+        .gallery__description {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1em;
+            font-size: .75em;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            transform: translateY(100%);
+            transition: all .3s ease-in-out;
+        }
+
+        .gallery__image:hover .gallery__description {
+            transform: translateY(0);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Gallery</h1>
+
+    <section class="gallery">
+
+        <div class="gallery__image">
+            <a href="#">
+                <img class="gallery__img" src="https://picsum.photos/id/237/500/400" alt="image">
+                <p class="gallery__description">Descricao da imagem</p>
+            </a>
+        </div>
+
+        <div class="gallery__image">
+            <a href="#">
+                <img class="gallery__img" src="https://picsum.photos/500/400?random=1">
+                <p class="gallery__description">Descricao da imagem</p>
+            </a>
+        </div>
+
+        <div class="gallery__image">
+            <a href="#">
+                <img class="gallery__img" src="https://picsum.photos/500/400?random=2" alt="image">
+                <p class="gallery__description">Descricao da imagem</p>
+            </a>
+        </div>
+
+        <div class="gallery__image">
+            <a href="#">
+                <img class="gallery__img" src="https://picsum.photos/500/400?random=3" alt="image">
+                <p class="gallery__description">Descricao da imagem</p>
+            </a>
+        </div>
+
+        <div class="gallery__image">
+            <a href="#">
+                <img class="gallery__img" src="https://picsum.photos/500/400?random=4" alt="image">
+                <p class="gallery__description">Descricao da imagem</p>
+            </a>
+        </div>
+
+        <div class="gallery__image">
+            <a href="#">
+                <img class="gallery__img" src="https://picsum.photos/500/400?random=5"alt="image">
+                <p class="gallery__description">Descricao da imagem</p>
+            </a>
+        </div>
+
+        <div class="gallery__image">
+            <a href="#">
+                <img class="gallery__img" src="https://picsum.photos/500/400?random=6" alt="image">
+                <p class="gallery__description">Descricao da imagem</p>
+            </a>
+        </div>
+
+        <div class="gallery__image">
+            <a href="#">
+                <img class="gallery__img" src="https://picsum.photos/500/400?random=7" alt="image">
+                <p class="gallery__description">Descricao da imagem</p>
+            </a>
+        </div>
+
+        <div class="gallery__image">
+            <a href="#">
+                <img class="gallery__img" src="https://picsum.photos/500/400?random=8" alt="image">
+                <p class="gallery__description">Descricao da imagem</p>
+            </a>
+        </div>
+
+        <div class="gallery__image">
+            <a href="#">
+                <img class="gallery__img" src="https://picsum.photos/500/400?random=9" alt="image">
+                <p class="gallery__description">Descricao da imagem</p>
+            </a>
+        </div>
+
+        <div class="gallery__image">
+            <a href="#">
+                <img class="gallery__img" src="https://picsum.photos/500/400?random=10" alt="image">
+                <p class="gallery__description">Descricao da imagem</p>
+            </a>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
